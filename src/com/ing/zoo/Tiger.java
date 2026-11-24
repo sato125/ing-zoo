@@ -3,13 +3,14 @@ package com.ing.zoo;
 import java.util.Random;
 
 public class Tiger implements Animal, Carnivore, Performer {
-    public String name;
+    private final String name;
     public String helloText;
     public String eatText;
     public String trick;
 
-    public Tiger()
+    public Tiger(String name)
     {
+        this.name = name;
     }
 
     public void sayHello()

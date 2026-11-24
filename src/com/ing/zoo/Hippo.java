@@ -1,12 +1,13 @@
 package com.ing.zoo;
 
 public class Hippo implements Animal, Herbivore {
-    public String name;
+    private final String name;
     public String helloText;
     public String eatText;
 
-    public Hippo()
+    public Hippo(String name)
     {
+        this.name = name;
     }
 
     public void sayHello()

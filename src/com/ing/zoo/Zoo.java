@@ -11,20 +11,13 @@ public class Zoo {
         commands[2] = "give meat";
         commands[3] = "perform trick";
 
-        Lion henk = new Lion();
-        henk.name = "henk";
-        Hippo elsa = new Hippo();
-        elsa.name = "elsa";
-        Pig dora = new Pig();
-        dora.name = "dora";
-        Tiger wally = new Tiger();
-        wally.name = "wally";
-        Zebra marty = new Zebra();
-        marty.name = "marty";
-        Stoat megatron = new Stoat();
-        megatron.name = "megatron";
-        KomodoDragon cupcake = new KomodoDragon();
-        cupcake.name = "cupcake";
+        Lion henk = new Lion("henk");
+        Hippo elsa = new Hippo("elsa");
+        Pig dora = new Pig("dora");
+        Tiger wally = new Tiger("wally");
+        Zebra marty = new Zebra("marty");
+        Stoat megatron = new Stoat("megatron");
+        KomodoDragon cupcake = new KomodoDragon("cupcake");
 
          Animal[] animals = new Animal[]{henk, elsa, dora, wally, marty, megatron, cupcake};
 
@@ -33,6 +26,7 @@ public class Zoo {
 
 
         String input = scanner.nextLine();
+        //hello
         if(input.equals(commands[0]))
         {
 
@@ -54,6 +48,7 @@ public class Zoo {
             }
             System.out.println("Animal not found: " + name);
         }
+        // give leaves
         else if (input.equals(commands[1])){
             for(Animal animal : animals)
             {
@@ -63,6 +58,7 @@ public class Zoo {
                 }
             }
         }
+        // give meat
         else if (input.equals(commands[2])){
             for(Animal animal : animals)
             {
@@ -72,6 +68,7 @@ public class Zoo {
                 }
             }
         }
+        // perform trick
         else if (input.equals(commands[3])){
             for(Animal animal : animals)
             {

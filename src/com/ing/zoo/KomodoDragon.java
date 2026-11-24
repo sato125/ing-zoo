@@ -3,13 +3,14 @@ package com.ing.zoo;
 import java.util.Random;
 
 public class KomodoDragon implements Animal, Carnivore, Performer {
-    public String name;
+    private final String name;
     public String helloText;
     public String eatText;
     public String trick;
 
-    public KomodoDragon()
+    public KomodoDragon(String name)
     {
+        this.name = name;
     }
 
     public void sayHello()

@@ -3,13 +3,14 @@ package com.ing.zoo;
 import java.util.Random;
 
 public class Zebra implements Animal, Herbivore {
-    public String name;
+    private final String name;
     public String helloText;
     public String eatText;
     public String trick;
 
-    public Zebra()
+    public Zebra(String name)
     {
+        this.name = name;
     }
 
     public void sayHello()

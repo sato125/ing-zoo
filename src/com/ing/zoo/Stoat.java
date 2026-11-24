@@ -1,13 +1,14 @@
 package com.ing.zoo;
 
 public class Stoat implements Animal, Carnivore, Performer {
-    public String name;
+    private final String name;
     public String helloText;
     public String eatText;
     public String performText;
 
-    public Stoat()
+    public Stoat(String name)
     {
+        this.name = name;
     }
 
     public void sayHello()
