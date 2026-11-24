@@ -21,8 +21,12 @@ public class Zoo {
         wally.name = "wally";
         Zebra marty = new Zebra();
         marty.name = "marty";
+        Stoat megatron = new Stoat();
+        megatron.name = "megatron";
+        KomodoDragon cupcake = new KomodoDragon();
+        cupcake.name = "cupcake";
 
-         Animal[] animals = new Animal[]{henk, elsa, dora, wally, marty};
+         Animal[] animals = new Animal[]{henk, elsa, dora, wally, marty, megatron, cupcake};
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
