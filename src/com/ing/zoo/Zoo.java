@@ -43,14 +43,16 @@ public class Zoo {
         }
         else if(input.startsWith(commands[0] + " "))
         {
-              String name = input.substring(commands[0].length() + 1);
-                for(Animal animal : animals)
+            String name = input.substring(commands[0].length() + 1);
+            for (Animal animal : animals)
+            {
+                if (animal.getName().equals(name))
                 {
-                    if(animal.getName().equals(name))
-                    {
-                        printGreeting(animal);
-                    }
+                    printGreeting(animal);
+                    return;
                 }
+            }
+            System.out.println("Animal not found: " + name);
         }
         else if (input.equals(commands[1])){
             for(Animal animal : animals)
