@@ -38,7 +38,7 @@ public class Zoo {
 
            for(Animal animal : animals)
            {
-               printGreeting(animal);
+               animal.sayHello();
         }
         }
         else if(input.startsWith(commands[0] + " "))
@@ -48,7 +48,7 @@ public class Zoo {
             {
                 if (animal.getName().equals(name))
                 {
-                    printGreeting(animal);
+                    animal.sayHello();
                     return;
                 }
             }
@@ -85,10 +85,5 @@ public class Zoo {
         {
             System.out.println("Unknown command: " + input);
         }
-    }
-
-    public static void printGreeting(Animal animal)
-    {
-        animal.sayHello();
     }
 }
