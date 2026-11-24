@@ -22,17 +22,67 @@ public class Zoo {
         Zebra marty = new Zebra();
         marty.name = "marty";
 
+         Animal[] animals = new Animal[]{henk, elsa, dora, wally, marty};
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
+
         String input = scanner.nextLine();
-        if(input.equals(commands[0] + " henk"))
+        if(input.equals(commands[0]))
         {
-            henk.sayHello();
+
+           for(Animal animal : animals)
+           {
+               printGreeting(animal);
+        }
+        }
+        else if(input.startsWith(commands[0] + " "))
+        {
+              String name = input.substring(commands[0].length() + 1);
+                for(Animal animal : animals)
+                {
+                    if(animal.getName().equals(name))
+                    {
+                        printGreeting(animal);
+                    }
+                }
+        }
+        else if (input.equals(commands[1])){
+            for(Animal animal : animals)
+            {
+                if(animal instanceof Herbivore)
+                {
+                    ((Herbivore) animal).eatLeaves();
+                }
+            }
+        }
+        else if (input.equals(commands[2])){
+            for(Animal animal : animals)
+            {
+                if(animal instanceof Carnivore)
+                {
+                    ((Carnivore) animal).eatMeat();
+                }
+            }
+        }
+        else if (input.equals(commands[3])){
+            for(Animal animal : animals)
+            {
+                if(animal instanceof Performer)
+                {
+                    ((Performer) animal).performTrick();
+                }
+            }
         }
         else
         {
             System.out.println("Unknown command: " + input);
         }
+    }
+
+    public static void printGreeting(Animal animal)
+    {
+        animal.sayHello();
     }
 }

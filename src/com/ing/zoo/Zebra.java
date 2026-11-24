@@ -2,7 +2,7 @@ package com.ing.zoo;
 
 import java.util.Random;
 
-public class Zebra {
+public class Zebra implements Animal, Herbivore {
     public String name;
     public String helloText;
     public String eatText;
@@ -22,5 +22,8 @@ public class Zebra {
     {
         eatText = "munch munch zank yee bra";
         System.out.println(eatText);
+    }
+    public String getName() {
+        return name;
     }
 }

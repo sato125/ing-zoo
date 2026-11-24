@@ -2,7 +2,7 @@ package com.ing.zoo;
 
 import java.util.Random;
 
-public class Tiger {
+public class Tiger implements Animal, Carnivore, Performer {
     public String name;
     public String helloText;
     public String eatText;
@@ -37,5 +37,8 @@ public class Tiger {
             trick = "scratches ears";
         }
         System.out.println(trick);
+    }
+    public String getName() {
+        return name;
     }
 }
